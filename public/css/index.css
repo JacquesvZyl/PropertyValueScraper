@@ -1,0 +1,29 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.search-container {
+  width: 100%;
+  height: 200px;
+  background-color: #0d63c9;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.search-box input[type="text"] {
+  min-width: 400px;
+  min-height: 40px;
+}
+
+.search-box input[type="text"]:before {
+  content: "FUCK";
+}
+
+.search-box button {
+  min-height: 40px;
+  min-width: 80px;
+}

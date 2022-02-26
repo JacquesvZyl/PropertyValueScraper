@@ -12,8 +12,10 @@ const properties = {
     return buyOrRent === "buy" ? this.propertyBuy : this.propertyRent;
   },
 };
+
 const urlData = {
   page: 1,
+
   returnUrl(buyOrRent) {
     const urlString =
       buyOrRent === "buy"
@@ -121,8 +123,9 @@ async function getPageData(browser, url, foundOnPage, buyOrRent) {
     Array.from(
       document.querySelectorAll(
         ".js_listingResultsContainer .js_resultTile:not(.p24_promotedTile) .p24_regularTile:not(.p24_boostedTile) a"
-      )
-    ).map((house) => house.href)
+      ),
+      (house) => house.href
+    )
   );
 
   /// GRABBING TYPE
@@ -130,8 +133,9 @@ async function getPageData(browser, url, foundOnPage, buyOrRent) {
     Array.from(
       document.querySelectorAll(
         ".js_listingResultsContainer .js_resultTile:not(.p24_promotedTile) .p24_regularTile:not(.p24_boostedTile) .p24_content .p24_title"
-      )
-    ).map((house) => house.innerText)
+      ),
+      (house) => house.innerText
+    )
   );
 
   /// GRABBING PRICE
@@ -139,8 +143,9 @@ async function getPageData(browser, url, foundOnPage, buyOrRent) {
     Array.from(
       document.querySelectorAll(
         ".js_listingResultsContainer .js_resultTile:not(.p24_promotedTile) .p24_regularTile:not(.p24_boostedTile) .p24_content .p24_price"
-      )
-    ).map((house) => house.innerText)
+      ),
+      (house) => house.innerText
+    )
   );
 
   /// GRABBING CITY
@@ -148,8 +153,9 @@ async function getPageData(browser, url, foundOnPage, buyOrRent) {
     Array.from(
       document.querySelectorAll(
         ".js_listingResultsContainer .js_resultTile:not(.p24_promotedTile) .p24_regularTile:not(.p24_boostedTile) .p24_content .p24_location"
-      )
-    ).map((house) => house.innerText)
+      ),
+      (house) => house.innerText
+    )
   );
 
   /// GRABBING BEDROOMS

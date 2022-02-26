@@ -4,23 +4,22 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/index.css">
     <title>Document</title>
 </head>
 <body>
-    <div class="container">
-        <table border = "1">
-            <tr>
-               <th>City</th>
-               <th>bedrooms</th>
-               <th>price</th>
-               <th>avg Rent</th>
-               <th>Estimated Bond</th>
-               <th>Roi Percentage</th>
-               <th>link</th>
-            </tr>
+    <div class="search-container">
+        <form action="post">
+        <div class="search-box">
+            <input type="text" id="autocomplete">
+            <button>Search</button>
+        </div>
+        </form>
 
-         </table>
     </div>
-    <script src="handleData.js"></script>
+
+
+    <script src="js/index.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB-TLy05xtpLTQZrzfRNMuHbtuUlJ96mNk&libraries=places&callback=initAutocomplete" defer async ></script>
 </body>
 </html>
